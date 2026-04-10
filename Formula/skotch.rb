@@ -1,75 +1,39 @@
 class Skotch < Formula
   desc "Command-line interface for skotch — produces the `skotch` binary"
   homepage "https://github.com/skotlang/skotch"
-  version "0.1.5"
+  version "0.1.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/skotlang/skotch/releases/download/v0.1.5/skotch-cli-aarch64-apple-darwin.zip"
-      sha256 "16bb6372e043baf24ca9640305c1b8d59e212789761d3e3672b4127f340a0db2"
+      url "https://github.com/skotlang/skotch/releases/download/v0.1.6/skotch-cli-aarch64-apple-darwin.zip"
+      sha256 "570d11d9233a6f264207c8f1969ad4e033def69c4aec27aa7e01891ece2ed211"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skotlang/skotch/releases/download/v0.1.5/skotch-cli-x86_64-apple-darwin.zip"
-      sha256 "f8bb067c9871dce21533658f85947738c10bcd765c1287cb1aeede183d8eabd3"
+      url "https://github.com/skotlang/skotch/releases/download/v0.1.6/skotch-cli-x86_64-apple-darwin.zip"
+      sha256 "f772c5784c4ce273c2b7ff19ca0af7ac52b63a562adae257b0a92f31356ee49c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/skotlang/skotch/releases/download/v0.1.5/skotch-cli-aarch64-unknown-linux-musl.zip"
-      sha256 "daade28edb9694edc68ee90d3b4d0d2b2ce21b457b850b25703dbe6497656c8f"
+      url "https://github.com/skotlang/skotch/releases/download/v0.1.6/skotch-cli-aarch64-unknown-linux-musl.zip"
+      sha256 "ae42b9ffc7fe1e9a2560179866d4bce8b5ba8c65db494b054fb1d6f7a2dc33e8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skotlang/skotch/releases/download/v0.1.5/skotch-cli-x86_64-unknown-linux-musl.zip"
-      sha256 "8ab3ea77d548d938f1a205858cae88fdd19062a25cef87c11d922405ef2c4c0a"
+      url "https://github.com/skotlang/skotch/releases/download/v0.1.6/skotch-cli-x86_64-unknown-linux-musl.zip"
+      sha256 "47366d84f285861e15fee93244a42dd6add086d1d29b62fc126cd6e2de263df0"
     end
   end
   license "Apache-2.0"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":               {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
-    "aarch64-unknown-linux-gnu":          {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
-    "aarch64-unknown-linux-musl-dynamic": {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
-    "aarch64-unknown-linux-musl-static":  {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
-    "x86_64-apple-darwin":                {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
-    "x86_64-pc-windows-gnu":              {
-      "skotch-cli.exe": [
-        "skotch.exe",
-      ],
-    },
-    "x86_64-unknown-linux-gnu":           {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
-    "x86_64-unknown-linux-musl-dynamic":  {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
-    "x86_64-unknown-linux-musl-static":   {
-      "skotch-cli": [
-        "skotch",
-      ],
-    },
+    "aarch64-apple-darwin":               {},
+    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static":  {},
+    "x86_64-apple-darwin":                {},
+    "x86_64-pc-windows-gnu":              {},
+    "x86_64-unknown-linux-gnu":           {},
+    "x86_64-unknown-linux-musl-dynamic":  {},
+    "x86_64-unknown-linux-musl-static":   {},
   }.freeze
 
   def target_triple
