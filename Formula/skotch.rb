@@ -1,25 +1,25 @@
 class Skotch < Formula
   desc "Command-line interface for skotch — produces the `skotch` binary"
   homepage "https://github.com/skotlang/skotch"
-  version "0.8.4"
+  version "0.9.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/skotlang/skotch/releases/download/v0.8.4/skotch-cli-aarch64-apple-darwin.zip"
-      sha256 "f8b8c2c74f811cede61b809770a4fcd46f05e7a7e7e44a08c593e0b1f086a839"
+      url "https://github.com/skotlang/skotch/releases/download/v0.9.0/skotch-cli-aarch64-apple-darwin.zip"
+      sha256 "c9e5cde0510e93f76ec43122e498752f8aca339541994d2049df5c4c5f48ddfe"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skotlang/skotch/releases/download/v0.8.4/skotch-cli-x86_64-apple-darwin.zip"
-      sha256 "634b80da83d580dbaadd1244236a54f54ca639a29bf24afba635f58f23944b4f"
+      url "https://github.com/skotlang/skotch/releases/download/v0.9.0/skotch-cli-x86_64-apple-darwin.zip"
+      sha256 "524fe397eb1a79ceff231b42a8327567e4606ba4aaf95319b50fb6655cbcbf49"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/skotlang/skotch/releases/download/v0.8.4/skotch-cli-aarch64-unknown-linux-musl.zip"
-      sha256 "2c38ca5f78161542ebd9884b18e23540d0ab61bad7e49ffc91d29b33b3656e6b"
+      url "https://github.com/skotlang/skotch/releases/download/v0.9.0/skotch-cli-aarch64-unknown-linux-musl.zip"
+      sha256 "9ce613bc7f13b71cf7192eb90dbfc2923f9c1c1ed712500d45f451875b91ed8c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skotlang/skotch/releases/download/v0.8.4/skotch-cli-x86_64-unknown-linux-musl.zip"
-      sha256 "0b3665e6f7819457badfb942e6e449755204ed74ffe689bd85a90442cf89fed4"
+      url "https://github.com/skotlang/skotch/releases/download/v0.9.0/skotch-cli-x86_64-unknown-linux-musl.zip"
+      sha256 "45b3e9fd10ef0a797a713c9ba50f32b0a8ff9e55d22bc877ebdbc8cf01a7a6ef"
     end
   end
   license "Apache-2.0"
